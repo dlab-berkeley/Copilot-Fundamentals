@@ -1,92 +1,86 @@
 # D-Lab Copilot Assisted Coding Workshop
 
-[![DataHub](https://img.shields.io/badge/launch-datahub-blue)](DATAHUB_LINK_HERE)
 [![Binder](https://mybinder.org/badge_logo.svg)](BINDER_LINK_HERE)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-This repository contains the materials for D-Lab [WorkshopName] workshop. 
+This repository contains the materials for D-Lab Copilot Assisted Coding Workshop. 
 
 ### Prerequisites
-We recommend attending [D-LabWorkshop1](D-LabWorkshop1Link),
-[D-LabWorkshop2](D-LabWorkshop2Link), and
-[AdditionalWorkshopsAsNeeded](LinksToWorkshops) prior to this workshop.
+
+Though GitHub Copilot is language agnostic, our examples will be in R. Therefore, we recommend attending D-Lab's [R
+Fundamentals](https://github.com/dlab-berkeley/R-Fundamentals) series
+prior to this workshop. If you use a language that is not R, you are still welcome to attend. Many of the examples will have analogs in other languages, such as Python.
 
 Check D-Lab's [Learning Pathways](https://dlab-berkeley.github.io/dlab-workshops/python_path.html) to figure out which of our workshops to take!
 
 ## Workshop Goals
 
-In this workshop, we provide [WorkshopGoal]. First, we’ll cover [Aim1]. Then,
-we’ll explore [Aim2]. 
-
-_Only if necessary:_ If you are not familiar with material in
-[D-LabWorkshop1](D-LabWorkshop1Link), [D-LabWorkshop2](D-LabWorkshop2Link), and
-[AdditionalWorkshopsAsNeeded](LinksToWorkshops), we recommend attending those
-workshops first.
+This workshop provides an introduction to coding with GitHub Copilot. First, we’ll cover how to install and set-up Visual Studio Code, a free code editor through which we will use GitHub Copilot. Then, we will go through the different features of GitHub Copilot and how to use them in R. 
 
 ## Learning Objectives
 
 After this workshop, you will be able to:
 
-- [LearningObjective1].
-- [LearningObjective2].
-- [LearningObjective3].
+1.  Set-up and navigate Visual Studio Code
+   
+2.  Take advantage of the main functionalities of GitHub Copilot for coding
+   
+3.  Understand some of the strengths and weaknesses of AI coding assistants
 
-This workshop does not cover the following:
-
-- [NotCovered1]. These are covered in [D-LabWorkshopName](URL).
-- [NotCovered2]. These are covered in [D-LabWorkshopName](URL).
-
+**⚠️ You must have an active subscription to GitHub Copilot to follow the material in this workshop** &mdash; though you may attend even if you do not. If you are a student or teacher, you can apply for free Github Copilot (see information [here](LINK)); the application is easy, however **it can take a few days to process (GitHub warns it can even take up to two weeks)**. Otherwise, you will have to pay for a subscription which starts at $10/month (plans available [here](https://github.com/features/copilot/plans)). If this is your first time using Copilot, you can also start a 30 day free trial.**
 
 ## Installation Instructions
 
-We will use [RStudio/Python] to go through the workshop materials, which requires installation of [Software]. Complete the following steps:
+We will use Visual Studio Code, GitHub Copilot, and R to go through the workshop materials, which requires installation of Visual Studio Code and R. We will walk through setting up GitHub Copilot and R in Visual Studio Code during the workshop, but you must have an existing subscription ot GitHub Co-pilot. Before the workshop, complete the following steps:
 
-1. This step(s) details software to download, with a link.
+1. Follow the instructions [here](LINK) to subscribe to GitHub Copilot and install R and Visual Studio Code. These instructions also describe setting up R and GitHub Copilot in Visual Studio Code, but you do not need to complete these steps before the workshop.
+   
 2. Download these workshop materials:
     * Click the green "Code" button in the top right of the repository information.
     * Click "Download Zip".
     * Extract this file to a folder on your computer where you can easily access it (we recommend Desktop).
+  
 3. Optional: if you’re familiar with git, you can instead clone this repository by opening a terminal and entering [GitCloneCommand].
 
-## Is [Language] not Working on Your Computer?
+## Is Visual Studio Code not Working on Your Computer?
 
-If you do not have [Language] installed and the materials loaded on your
-workshop by the time it starts, we *strongly* recommend using the UC Berkeley
-Datahub to run the materials for these lessons. You can access the DataHub by
-clicking the following button:
+If you do not have Visual Studio Code installed and the materials loaded on your
+workshop by the time it starts, we *strongly* recommend using our GitHub codespace to run the materials for these lessons. 
 
-[![DataHub](https://img.shields.io/badge/launch-datahub-blue)](DATAHUB_LINK_HERE)
+You can create a codespace for this repository by:
+1. Clicking the green "Code" button in the top right of the repository information.
+   
+2. Clicking "Open with Codespaces".
+   
+3. Wait for the codespace to load. This may take a few minutes.
 
-The DataHub downloads this repository, along with any necessary packages, and
-allows you to run the materials in an RStudio instance on UC Berkeley's servers.
-No installation is necessary from your end - you only need an internet browser
-and a CalNet ID to log in. By using the DataHub, you can save your work and come
-back to it at any time. When you want to return to your saved work, just go
-straight to the [D-Lab DataHub](https://dlab.datahub.berkeley.edu), sign in, and
-you click on the `[Workshop-Name]` folder.
-
-If you don't have a Berkeley CalNet ID, you can still run these lessons in the cloud, by clicking this button:
-
-[![Binder](https://mybinder.org/badge_logo.svg)](BINDER_LINK_HERE)
-
-By using this button, however, you cannot save your work.
-
+The codespace uploads this repository, along with any necessary packages, and
+allows you to run the materials in the cloud in a virtual Visual Studio Code that will look basically like what is on your computer.
+No installation is necessary from your end - you only need an internet browser. To save your work, the easiest way is to copy and paste
+the markdown files into a local file on your computer. If you are comfortable with Git, you can also fork this repository and commit your changes to your fork (instructions [here](https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle#saving-changes-in-a-codespace)).
 
 ## Run the Code
 
-Now that you have all the required software and materials, you need to run the code:
+Now that you have all the required software and materials, you need to open the code.
 
-Provide instructions on running the code, including how to load relevant software (RStudio, Jupyter Notebooks, etc.) and which file to open up. See other repositories for examples.
-
-Additionally, provide instructions on how to run code once it’s open (running Jupyter cells, RMarkdown cells, etc.).
+1.  Launch the Visual Studio Code software.
+   
+2.  Click "Open Folder" in the Visual Studio Code welcome window
+   
+3.  Use the file navigator to find the GitHub-Copilot folder you downloaded from Github and click "Open".
+   
+4.  Open up the `workshop.Rmd` file via the Files panel in Visual Studio Code (lefthand side).
+   
+5.  The `solutions` folder contains the solutions to the challenge problems.
+   
+6.  You will need to install the R extension in Visual Studio Code to run any R code and the Copilot extension to use Copilot, which we will walk through in the workshop. If you would like to install them before hand check out the instructions [here](LINK).
 
 # Additional Resources
 
-Check out the following resources to learn more about [Workshop topics]:
+Check out the following resources to learn more about Visual Studio Code and GitHub Copilot:
 
-* [Resource1](LinkToResource1): _Explain Resource 1_
-* [Resource2](LinkToResource2): _Explain Resource 2_
-* [...]
+* [Overview of Visual Studio Code](https://code.visualstudio.com/docs)
+* [Overview of GitHub Copilot in Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview)
 
 
 # About the UC Berkeley D-Lab
@@ -95,19 +89,8 @@ D-Lab works with Berkeley faculty, research staff, and students to advance data-
 
 Visit the [D-Lab homepage](https://dlab.berkeley.edu/) to learn more about us. You can view our [calendar](https://dlab.berkeley.edu/events/calendar) for upcoming events, learn about how to utilize our [consulting](https://dlab.berkeley.edu/consulting) and [data](https://dlab.berkeley.edu/data) services, and check out upcoming [workshops](https://dlab.berkeley.edu/events/workshops).
 
-# Other D-Lab [Language] Workshops
-
-Here are other [Language] workshops offered by the D-Lab:
-
-## Basic Competency
-
-**Provide a list of workshops here.**
-
-## Intermediate/Advanced Competency
-
-**Provide a list of workshops here.**
-
 # Contributors
 
-**Provide a list of contributors here, with links to their webpages (D-Lab or
-private).**
+[Anusha Bishop](https://anushapb.github.io/)
+
+*This repository was created with material from the [codespacer](https://github.com/AnushaPB/codespacer/tree/main) GitHub template created by Anusha Bishop*

@@ -1,0 +1,24 @@
+{
+  "image": "ghcr.io/rocker-org/devcontainer/tidyverse:4.3",
+  "name": "GitHub-Copilot Workshop",
+  "postCreateCommand": "sudo cp --force ./.devcontainer/welcome-message.txt /usr/local/etc/vscode-dev-containers/first-run-notice.txt",
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["README.md"]
+    },
+    "vscode": {
+      "settings": {
+        "r.rterm.linux": "/usr/local/bin/radian",
+        "r.bracketedPaste": true,
+        "r.plot.useHttpgd": true,
+        "[r]": {
+          "editor.wordSeparators": "`~!@#%$^&*()-=+[{]}\\|;:'\",<>/?"
+        }
+      },
+      "extensions": [
+        "github.copilot",
+        "reditorsupport.r"
+      ]
+    }
+  }
+}

@@ -1,0 +1,2 @@
+👋 Welcome to the GitHub Copilot Workshop Codespace! 
+😎 This space operates just like your own personal Visual Studio Code, but with everything already installed and ready to go!
