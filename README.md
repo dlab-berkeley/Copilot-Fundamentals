@@ -27,13 +27,13 @@ After this workshop, you will be able to:
    
 3.  Understand some of the strengths and weaknesses of AI coding assistants
 
-**⚠️ You must have an active subscription to GitHub Copilot to follow the material in this workshop** &mdash; though you may attend even if you do not. If you are a student or teacher, you can apply for free Github Copilot (see information [here](LINK)); the application is easy, however **it can take a few days to process (GitHub warns it can even take up to two weeks)**. Otherwise, you will have to pay for a subscription which starts at $10/month (plans available [here](https://github.com/features/copilot/plans)). If this is your first time using Copilot, you can also start a 30 day free trial.**
+**⚠️ You must have an active subscription to GitHub Copilot to follow the material in this workshop** &mdash; though you may attend even if you do not. If you are a student or teacher, you can apply for free Github Copilot (see information [here](copilot_and_vscode_setup.md)); the application is easy, however **it can take a few days to process (GitHub warns it can even take up to two weeks)**. Otherwise, you will have to pay for a subscription which starts at $10/month (plans available [here](https://github.com/features/copilot/plans)). If this is your first time using Copilot, you can also start a 30 day free trial.**
 
 ## Installation Instructions
 
 We will use Visual Studio Code, GitHub Copilot, and R to go through the workshop materials, which requires installation of Visual Studio Code and R. We will walk through setting up GitHub Copilot and R in Visual Studio Code during the workshop, but you must have an existing subscription ot GitHub Co-pilot. Before the workshop, complete the following steps:
 
-1. Follow the instructions [here](LINK) to subscribe to GitHub Copilot and install R and Visual Studio Code. These instructions also describe setting up R and GitHub Copilot in Visual Studio Code, but you do not need to complete these steps before the workshop.
+1. Follow the instructions [here](copilot_and_vscode_setup.md) to subscribe to GitHub Copilot and install R and Visual Studio Code. These instructions also describe setting up R and GitHub Copilot in Visual Studio Code, but you do not need to complete these steps before the workshop.
    
 2. Download these workshop materials:
     * Click the green "Code" button in the top right of the repository information.
@@ -73,7 +73,7 @@ Now that you have all the required software and materials, you need to open the 
    
 5.  The `solutions` folder contains the solutions to the challenge problems.
    
-6.  You will need to install the R extension in Visual Studio Code to run any R code and the Copilot extension to use Copilot, which we will walk through in the workshop. If you would like to install them before hand check out the instructions [here](LINK).
+6.  You will need to install the R extension in Visual Studio Code to run any R code and the Copilot extension to use Copilot, which we will walk through in the workshop. If you would like to install them before hand check out the instructions [here](copilot_and_vscode_setup.md).
 
 # Additional Resources
 
