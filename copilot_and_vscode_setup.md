@@ -1,8 +1,6 @@
-
-# Setting up Visual Studio Code and GitHub Copilot
+<p style="font-size:30px">Setting up Visual Studio Code and GitHub Copilot.</p>
 
 **Table of Contents**
-- [Setting up Visual Studio Code and GitHub Copilot](#setting-up-visual-studio-code-and-github-copilot)
 - [1. GitHub Copilot](#1-github-copilot)
   - [1.1 Making a GitHub account](#11-making-a-github-account)
   - [1.1 Sign-up for Copilot](#11-sign-up-for-copilot)
