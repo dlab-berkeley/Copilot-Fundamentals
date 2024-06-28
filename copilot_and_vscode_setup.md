@@ -1,7 +1,3 @@
-<!--
-# Setting up Visual Studio Code and GitHub Copilot
--->
-
 <h1>Setting up Visual Studio Code and GitHub Copilot</h1>
 
 **Table of Contents**
