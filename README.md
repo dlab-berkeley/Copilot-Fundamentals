@@ -15,23 +15,23 @@ Check D-Lab's [Learning Pathways](https://dlab-berkeley.github.io/dlab-workshops
 
 ## Workshop Goals
 
-This workshop provides an introduction to coding with GitHub Copilot. First, we’ll cover how to install and set-up Visual Studio Code, a free code editor through which we will use GitHub Copilot. Then, we will go through the different features of GitHub Copilot and how to use them in R. 
+This workshop provides an introduction to coding with GitHub Copilot. First, we’ll cover how to install and set-up Visual Studio Code, a free code editor through which we will use GitHub Copilot. Then, we will go through the different features of GitHub Copilot and how to use them to help us code in R. 
 
 ## Learning Objectives
 
 After this workshop, you will be able to:
 
-1.  Set-up and navigate Visual Studio Code
+1.  Set-up and navigate Visual Studio Code.
    
-2.  Take advantage of the main functionalities of GitHub Copilot for coding
+2.  Take advantage of the main functionalities of GitHub Copilot for coding.
    
-3.  Understand some of the strengths and weaknesses of AI coding assistants
+3.  Understand some of the strengths and weaknesses of AI coding assistants.
 
-**⚠️ You must have an active subscription to GitHub Copilot to follow the material in this workshop** &mdash; though you may attend even if you do not. If you are a student or teacher, you can apply for free Github Copilot (see information [here](copilot_and_vscode_setup.md)); the application is easy, however **it can take a few days to process (GitHub warns it can even take up to two weeks)**. Otherwise, you will have to pay for a subscription which starts at $10/month (plans available [here](https://github.com/features/copilot/plans)). If this is your first time using Copilot, you can also start a 30 day free trial.**
+**⚠️ You must have an active subscription to GitHub Copilot to follow the material in this workshop** &mdash; though you may attend even if you do not. If you are a student or teacher, you can apply for free Github Copilot (see information [here](copilot_and_vscode_setup.md)); the application is easy, however **it can take a few days to process (GitHub warns it can even take up to two weeks &mdash; though we have found it generally takes 2-3 days)**. Otherwise, you will have to pay for a subscription which starts at $10/month (plans available [here](https://github.com/features/copilot/plans)). If this is your first time using Copilot, you can also start a 30 day free trial.
 
 ## Installation Instructions
 
-We will use Visual Studio Code, GitHub Copilot, and R to go through the workshop materials, which requires installation of Visual Studio Code and R. We will walk through setting up GitHub Copilot and R in Visual Studio Code during the workshop, but you must have an existing subscription ot GitHub Co-pilot. Before the workshop, complete the following steps:
+We will use Visual Studio Code, GitHub Copilot, and R to go through the workshop materials, which requires installation of Visual Studio Code and R. We will walk through setting up GitHub Copilot and R in Visual Studio Code during the workshop, but you must have an existing subscription to GitHub Co-pilot. **Before the workshop, complete the following steps:**
 
 1. Follow the instructions [here](copilot_and_vscode_setup.md) to subscribe to GitHub Copilot and install R and Visual Studio Code. These instructions also describe setting up R and GitHub Copilot in Visual Studio Code, but you do not need to complete these steps before the workshop.
    
@@ -39,18 +39,16 @@ We will use Visual Studio Code, GitHub Copilot, and R to go through the workshop
     * Click the green "Code" button in the top right of the repository information.
     * Click "Download Zip".
     * Extract this file to a folder on your computer where you can easily access it (we recommend Desktop).
-  
-3. Optional: if you’re familiar with git, you can instead clone this repository by opening a terminal and entering [GitCloneCommand].
 
 ## Is Visual Studio Code not Working on Your Computer?
 
 If you do not have Visual Studio Code installed and the materials loaded on your
 workshop by the time it starts, we *strongly* recommend using our GitHub codespace to run the materials for these lessons. 
 
-You can create a codespace for this repository by:
-1. Clicking the green "Code" button in the top right of the repository information.
+You can create a codespace for this repository:
+1. Click the green "Code" button in the top right of the repository information.
    
-2. Clicking "Open with Codespaces".
+2. Click "Open with Codespaces".
    
 3. Wait for the codespace to load. This may take a few minutes.
 
@@ -63,13 +61,13 @@ the markdown files into a local file on your computer. If you are comfortable wi
 
 Now that you have all the required software and materials, you need to open the code.
 
-1.  Launch the Visual Studio Code software.
+1.  Open Visual Studio Code.
    
-2.  Click "Open Folder" in the Visual Studio Code welcome window
+2.  Click "Open Folder" in the Visual Studio Code welcome window.
    
 3.  Use the file navigator to find the GitHub-Copilot folder you downloaded from Github and click "Open".
    
-4.  Open up the `workshop.Rmd` file via the Files panel in Visual Studio Code (lefthand side).
+4.  Open up the `workshop.Rmd` file in the `lessons` folder via the Files panel in Visual Studio Code (lefthand side).
    
 5.  The `solutions` folder contains the solutions to the challenge problems.
    

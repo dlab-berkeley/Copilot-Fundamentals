@@ -1,7 +1,3 @@
-<!--
-# Setting up Visual Studio Code and GitHub Copilot
--->
-
 <h1>Setting up Visual Studio Code and GitHub Copilot</h1>
 
 **Table of Contents**
@@ -95,7 +91,7 @@ Steps:
     1. Open VS Code
     2. Click on the Extensions icon in the toolbar on the left side 
    
-    <img src="images/extensions.png" alt="R extensions" width="200">
+    <img src="images/extensions.png" alt="R extensions" width="300">
 
     3. Look up “R” and click the “Install” button to install R
 4. Done! Now you can run R code by either opening or creating an R file in VS Code (to create a file click _File > New File…_ and selecting R document or R markdown from the files). Note that VS Code uses lowercase .r and .rmd by default, but it will also accept .R and .Rmd files. To run R code, just click **“Ctrl + Enter”** and you will see your code run in a new R Interactive terminal window (analogous to the RStudio console)
@@ -117,7 +113,7 @@ Steps:
     1. Open VS Code
     2. Click on the Extensions icon in the toolbar on the left side
     
-    <img src="images/github_extensions.png" alt="GitHub extensions" width="200">
+    <img src="images/github_extensions.png" alt="GitHub extensions" width="300">
 
 - 1. Look up “GitHub Copilot” and click the “Install” button to install Copilot. This will also automatically install “GitHub Copilot Chat”
 
