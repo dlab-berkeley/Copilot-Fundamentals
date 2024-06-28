@@ -21,11 +21,11 @@ This workshop provides an introduction to coding with GitHub Copilot. First, we�
 
 After this workshop, you will be able to:
 
-1.  Set-up and navigate Visual Studio Code
+1.  Set-up and navigate Visual Studio Code.
    
-2.  Take advantage of the main functionalities of GitHub Copilot for coding
+2.  Take advantage of the main functionalities of GitHub Copilot for coding.
    
-3.  Understand some of the strengths and weaknesses of AI coding assistants
+3.  Understand some of the strengths and weaknesses of AI coding assistants.
 
 **⚠️ You must have an active subscription to GitHub Copilot to follow the material in this workshop** &mdash; though you may attend even if you do not. If you are a student or teacher, you can apply for free Github Copilot (see information [here](copilot_and_vscode_setup.md)); the application is easy, however **it can take a few days to process (GitHub warns it can even take up to two weeks &mdash; though we have found it generally takes 2-3 days)**. Otherwise, you will have to pay for a subscription which starts at $10/month (plans available [here](https://github.com/features/copilot/plans)). If this is your first time using Copilot, you can also start a 30 day free trial.
 
@@ -61,9 +61,9 @@ the markdown files into a local file on your computer. If you are comfortable wi
 
 Now that you have all the required software and materials, you need to open the code.
 
-1.  Open Visual Studio Code
+1.  Open Visual Studio Code.
    
-2.  Click "Open Folder" in the Visual Studio Code welcome window
+2.  Click "Open Folder" in the Visual Studio Code welcome window.
    
 3.  Use the file navigator to find the GitHub-Copilot folder you downloaded from Github and click "Open".
    
