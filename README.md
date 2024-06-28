@@ -31,7 +31,7 @@ After this workshop, you will be able to:
 
 ## Installation Instructions
 
-We will use Visual Studio Code, GitHub Copilot, and R to go through the workshop materials, which requires installation of Visual Studio Code and R. We will walk through setting up GitHub Copilot and R in Visual Studio Code during the workshop, but you must have an existing subscription ot GitHub Co-pilot. Before the workshop, complete the following steps:
+We will use Visual Studio Code, GitHub Copilot, and R to go through the workshop materials, which requires installation of Visual Studio Code and R. We will walk through setting up GitHub Copilot and R in Visual Studio Code during the workshop, but you must have an existing subscription to GitHub Co-pilot. **Before the workshop, complete the following steps:**
 
 1. Follow the instructions [here](copilot_and_vscode_setup.md) to subscribe to GitHub Copilot and install R and Visual Studio Code. These instructions also describe setting up R and GitHub Copilot in Visual Studio Code, but you do not need to complete these steps before the workshop.
    
