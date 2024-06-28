@@ -39,8 +39,6 @@ We will use Visual Studio Code, GitHub Copilot, and R to go through the workshop
     * Click the green "Code" button in the top right of the repository information.
     * Click "Download Zip".
     * Extract this file to a folder on your computer where you can easily access it (we recommend Desktop).
-  
-3. Optional: if you’re familiar with git, you can instead clone this repository by opening a terminal and entering [GitCloneCommand].
 
 ## Is Visual Studio Code not Working on Your Computer?
 
