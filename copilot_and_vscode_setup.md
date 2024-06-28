@@ -1,4 +1,8 @@
-<p style="font-size:30px">Setting up Visual Studio Code and GitHub Copilot.</p>
+<!--
+# Setting up Visual Studio Code and GitHub Copilot
+-->
+
+<h1>Setting up Visual Studio Code and GitHub Copilot</h1>
 
 **Table of Contents**
 - [1. GitHub Copilot](#1-github-copilot)
