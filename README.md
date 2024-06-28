@@ -45,10 +45,10 @@ We will use Visual Studio Code, GitHub Copilot, and R to go through the workshop
 If you do not have Visual Studio Code installed and the materials loaded on your
 workshop by the time it starts, we *strongly* recommend using our GitHub codespace to run the materials for these lessons. 
 
-You can create a codespace for this repository by:
-1. Clicking the green "Code" button in the top right of the repository information.
+You can create a codespace for this repository:
+1. Click the green "Code" button in the top right of the repository information.
    
-2. Clicking "Open with Codespaces".
+2. Click "Open with Codespaces".
    
 3. Wait for the codespace to load. This may take a few minutes.
 
