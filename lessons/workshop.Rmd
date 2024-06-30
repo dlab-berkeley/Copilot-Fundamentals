@@ -249,6 +249,8 @@ function(input1, input2)
 
 ⚠️ **Warning**: Sometimes Copilot will not generate suggestions and you will have to keep typing to trigger the suggestions. Also, if you are a speedy typer, Copilot may not have time to generate suggestions, so you may need to slow down a bit to give it time to catch up. The more you use Copilot, the better it will get at providing suggestions.
 
+ 💡 **Tip**: If you have been going through this workshop in our GitHub Codespace and you want to save the changes you made to this file, the easiest way is to just copy and paste the file into a local file on your computer. If you are comfortable with Git, you can also fork this repository and commit your changes to your fork (instructions here: https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle#saving-changes-in-a-codespace).
+
 ## Key Points
 
 Summary of what was learned in today's workshop:
