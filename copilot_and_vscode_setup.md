@@ -12,6 +12,7 @@
   - [3.1 I am using windows and my VS Code can’t find R](#31-i-am-using-windows-and-my-vs-code-cant-find-r)
   - [3.1 Will I have to reinstall all my R packages in VS Code?](#31-will-i-have-to-reinstall-all-my-r-packages-in-vs-code)
   - [3.2 Where am I when I open VS Code?](#32-where-am-i-when-i-open-vs-code)
+  - [3.3 I don't have a "Run Chunk" option in my R markdown file](#33-i-dont-have-a-run-chunk-option-in-my-r-markdown-file)
 
 # 1\. GitHub Copilot
 
@@ -153,3 +154,16 @@ No, VS Code will reference your existing R installation, so whatever you have do
 ## 3.2 Where am I when I open VS Code?
 
 When you open a new VS Code window you will see on the Welcome screen suggestions to open a file or a folder. If you open a folder (recommended), when you start running R you will be inside that folder (run **getwd()** to confirm this). If you open a file, you will be wherever your default working directory is – which is usually your user profile directory (e.g., C:\\Users\\&lt;YourUsername&gt; on windows).
+
+## 3.3 I don't have a "Run Chunk" option in my R markdown file
+
+If you don't see a "Run Chunk" option in your R markdown file, you may need to edit your settings to recognize the file type. To do this:
+1. Type `Ctrl + Shift + P` or `Cmd + Shift + P` to open the command palette
+2. in the search bar look up and click `Preferences: Open User Settings (JSON)`
+3. In this file, look for the section that says `"files.associations": {` and edit it so it looks like this:
+```JSON
+  "files.associations": {
+    "*.rmd": "rmarkdown",
+    "*.Rmd": "rmarkdown"
+  }
+```
