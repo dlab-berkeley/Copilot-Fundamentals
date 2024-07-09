@@ -88,7 +88,7 @@ Now that you have all the required software and materials, you need to open the 
    
 5.  The `solutions` folder contains the solutions to the challenge problems.
    
-6.  You will need to install the R extension in Visual Studio Code to run any R code and the Copilot extension to use Copilot, which we will walk through in the workshop. If you would like to install them before hand check out the instructions [here](copilot_and_vscode_setup.md).
+6.  You will need to install the R extension in Visual Studio Code to run any R code and the Copilot extension to use Copilot, which we will walk through in the workshop. If you would like to install them beforehand check out the instructions [here](copilot_and_vscode_setup.md).
 
 # Additional Resources
 
