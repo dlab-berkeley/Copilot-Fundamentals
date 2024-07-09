@@ -29,16 +29,31 @@ After this workshop, you will be able to:
 
 **⚠️ You must have an active subscription to GitHub Copilot to follow the material in this workshop** &mdash; though you may attend even if you do not. If you are a student or teacher, you can apply for free Github Copilot (see information [here](copilot_and_vscode_setup.md)); the application is easy, however **it can take a few days to process (GitHub warns it can even take up to two weeks &mdash; though we have found it generally takes 2-3 days)**. Otherwise, you will have to pay for a subscription which starts at $10/month (plans available [here](https://github.com/features/copilot/plans)). If this is your first time using Copilot, you can also start a 30 day free trial.
 
+⚠️ At the start of the workshop we will install R, RStudio and the workshop materials from this repository. If you want to do that yourself beforehand, please follow the instructions below.
+
 ## Installation Instructions
 
-We will use Visual Studio Code, GitHub Copilot, and R to go through the workshop materials, which requires installation of Visual Studio Code and R. We will walk through setting up GitHub Copilot and R in Visual Studio Code during the workshop, but you must have an existing subscription to GitHub Co-pilot. **Before the workshop, complete the following steps:**
+We will use Visual Studio Code, GitHub Copilot, and R to go through the workshop materials. We will walk through installing and setting up R and Visual Studio Code during the workshop, but you must have an existing subscription to GitHub Co-pilot. 
 
-1. Follow the instructions [here](copilot_and_vscode_setup.md) to subscribe to GitHub Copilot and install R and Visual Studio Code. These instructions also describe setting up R and GitHub Copilot in Visual Studio Code, but you do not need to complete these steps before the workshop.
+**Before the workshop:** Follow the instructions [here](copilot_and_vscode_setup.md) to subscribe to GitHub Copilot. These instructions also describe setting up R and GitHub Copilot in Visual Studio Code, but you do not need to complete these steps before the workshop.
+
+**During the workshop (or optionally before):**
+
+1.  [Download R](https://www.r-project.org/): Follow the links according
+    to the operating system that you are running. Download the package,
+    and install R onto your compute. You should install the most recent
+    version (at least version 4.3).
+
+2.  [Download Visual Studio Code](https://code.visualstudio.com/): Follow
+    the links according to the operating system that you are running. Do this after you have
+    already installed R.
    
-2. Download these workshop materials:
+3. Download these workshop materials:
     * Click the green "Code" button in the top right of the repository information.
     * Click "Download Zip".
     * Extract this file to a folder on your computer where you can easily access it (we recommend Desktop).
+
+Detailed installation instructions (including troubleshooting steps) can be found [here](copilot_and_vscode_setup.md). 
 
 ## Is Visual Studio Code not Working on Your Computer?
 
