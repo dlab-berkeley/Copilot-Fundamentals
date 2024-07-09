@@ -84,7 +84,7 @@ Now that you have all the required software and materials, you need to open the 
    
 3.  Use the file navigator to find the GitHub-Copilot folder you downloaded from Github and click "Open".
    
-4.  Open up the `workshop.Rmd` file in the `lessons` folder via the Files panel in Visual Studio Code (lefthand side).
+4.  Open up the `workshop.Rmd` file in the `lessons` folder via the Files panel in Visual Studio Code (left-hand side).
    
 5.  The `solutions` folder contains the solutions to the challenge problems.
    
