@@ -252,7 +252,9 @@ function(input1, input2)
 
 ⚠️ **Warning**: Sometimes Copilot will not generate suggestions and you will have to keep typing to trigger the suggestions. Also, if you are a speedy typer, Copilot may not have time to generate suggestions, so you may need to slow down a bit to give it time to catch up. The more you use Copilot, the better it will get at providing suggestions.
 
- 💡 **Tip**: If you have been going through this workshop in our GitHub Codespace and you want to save the changes you made to this file, the easiest way is to just copy and paste the file into a local file on your computer. If you are comfortable with Git, you can also fork this repository and commit your changes to your fork (instructions here: https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle#saving-changes-in-a-codespace).
+💡 **Tip**: If you have been going through this workshop in our GitHub Codespace and you want to save the changes you made to this file, the easiest way is to just copy and paste the file into a local file on your computer. If you are comfortable with Git, you can also fork this repository and commit your changes to your fork (instructions here: https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle#saving-changes-in-a-codespace).
+
+⚠️ **Final Warning**: Copilot is a wonderful tool for helping us code. It can often help us write better code and even catch common mistakes. However, it is not perfect and can provide incorrect or even harmful suggestions. It is important to always review the code that Copilot provides and make sure it is doing what you expect it to do. It is easy to slip into "Tab" completing everything and using big chunks of code written by Copilot. However, **not all incorrect code will result in a error or warning, the most common and insidious code problems are silent**, which is why it is essential to understand what your code is doing.
 
 ## Key Points
 
