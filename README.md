@@ -74,7 +74,7 @@ allows you to run the materials in the cloud in a virtual Visual Studio Code tha
 No installation is necessary from your end, you only need an internet browser. To save your work, the easiest way is to copy and paste
 the markdown files into a local file on your computer. If you are comfortable with Git, you can also fork this repository and commit your changes to your fork (instructions [here](https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle#saving-changes-in-a-codespace)). 
 
-**Even if you are using our codespace you must have your own GitHub Copilot subscription; the codespace is linked to your GitHub account.** If you are using a free GitHub account, you automatically get 120 free codespace core-hours per month. This 2 hour workshop should only use 4 core-hours.
+**Even if you are using our codespace you must have your own GitHub Copilot subscription; the codespace is linked to your GitHub account.** If you are using a free GitHub account, you automatically get [120 free codespace core-hours per month](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces). This 2 hour workshop should only use 4 core-hours.
 
 ## Run the Code
 
