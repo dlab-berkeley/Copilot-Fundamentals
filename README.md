@@ -27,7 +27,7 @@ After this workshop, you will be able to:
    
 3.  Understand some of the strengths and weaknesses of AI coding assistants.
 
-**⚠️ You must have an active subscription to GitHub Copilot to follow the material in this workshop** &mdash; though you may attend even if you do not. If you are a student or teacher, you can apply for free Github Copilot (see information [here](copilot_and_vscode_setup.md)); the application is easy, however **it can take a few days to process (GitHub warns it can even take up to two weeks &mdash; though we have found it generally takes 2-3 days)**. Otherwise, you will have to pay for a subscription which starts at $10/month (plans available [here](https://github.com/features/copilot/plans)). If this is your first time using Copilot, you can also start a 30 day free trial.
+**⚠️ You must have an active subscription to GitHub Copilot to follow the material in this workshop** (you still may attend even if you do not). If you are a student or teacher, you can apply for free Github Copilot (see information [here](copilot_and_vscode_setup.md)); the application is easy, however **it can take a few days to process (GitHub warns it can even take up to two weeks &mdash; though we have found it generally takes 2-3 days)**. Otherwise, you will have to pay for a subscription which starts at $10/month (plans available [here](https://github.com/features/copilot/plans)). If this is your first time using Copilot, you can also start a 30 day free trial.
 
 ⚠️ At the start of the workshop we will install R, RStudio and the workshop materials from this repository. If you want to do that yourself beforehand, please follow the instructions below.
 
