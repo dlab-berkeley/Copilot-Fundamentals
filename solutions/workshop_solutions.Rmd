@@ -207,3 +207,14 @@ ggplot(data.frame(x = 1:6, y = 1:6), aes(x = x, y = y, color = rainbow_colors())
   geom_point(size = 5) +
   scale_color_identity()
 ```
+
+### 🥊 Challenge 7: 
+To demonstrate this pitfall, let's ask Copilot to do something very broad: figure out what drives life expectancy.
+
+```{r}
+# Fit a linear model predicting life expectancy
+model <- lm(lifeExp ~ ., data = data)
+
+# Display the summary of the linear model to see the significant predictors
+summary(model)
+```

@@ -252,6 +252,86 @@ function(input1, input2)
 
 ⚠️ **Warning**: Sometimes Copilot will not generate suggestions and you will have to keep typing to trigger the suggestions. Also, if you are a speedy typer, Copilot may not have time to generate suggestions, so you may need to slow down a bit to give it time to catch up. The more you use Copilot, the better it will get at providing suggestions.
 
+A common pitfall when working with Copilot is using it to generate code without understanding what the code is doing. **Just because code runs without an error does not mean it is correct.** Remember, you are the pilot and Copilot is...the copilot; it is crucial to use your knowledge and expertise to guide your coding decisions.
+
+### 🥊 Challenge 7: 
+To demonstrate this pitfall, let's ask Copilot to do something very broad: figure out what drives life expectancy.
+
+```{r}
+# Using the chat, ask Copilot to determine the driver of life expectancy in our data
+```
+
+You will probably get some code that builds a linear model using the lm() function. For example:
+
+```{r}
+mod <- lm(lifeExp ~ ., data = gap)
+summary(mod)
+```
+
+What do you notice about this model? How is this code different than what you would have done? 
+
+What next steps would you take to assess the validity of this model?
+
+You may notice that Copilot recommends including variables that you may not want to include or that are colinear (for example, country and continent). Let's simplify the model:
+
+```{r}
+mod1 <- lm(lifeExp ~ gdpPercap + year + pop, data = gap)
+summary(mod1)
+```
+
+Next, let's check the residuals of the model to see if they are normally distributed:
+```{r}
+# Q-Q plot for residuals
+qqnorm(residuals(mod1))
+qqline(residuals(mod1), col = "red")
+```
+
+The residuals do not appear to be normally distributed (i.e., the points deviate from the Q-Q line). Let's do some additional data visualization to figure out what is going on:
+```{r}
+ggplot(gap, aes(x = pop, y = lifeExp)) +
+  geom_point() +
+  geom_smooth(method = "lm") + 
+  theme(legend.position = "none") 
+
+ggplot(gap, aes(x = year, y = lifeExp)) +
+  geom_smooth(method = "lm") + 
+  geom_point() +
+  theme(legend.position = "none")
+
+ggplot(gap, aes(x = gdpPercap, y = lifeExp)) +
+  geom_smooth(method = "lm") + 
+  geom_point() +
+  theme(legend.position = "none")
+```
+
+We notice that the relationship between some of the variables and life expectancy are non-linear. We are going to focus on population size, because there is a particularly strong non-linear pattern in the data and it appears as if we may need an interaction term. Let's plot the points colored by continent and country to see if there is a pattern:
+
+```{r}
+ggplot(gap, aes(x = pop, y = lifeExp, color = continent)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  theme(legend.position = "none")
+
+ggplot(gap, aes(x = pop, y = lifeExp, color = country)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  theme(legend.position = "none")
+```
+
+It seems like we should fit an interaction term for country based on these plots. Let's fit a model with an interaction term for country and population size.
+
+```{r}
+mod2 <- lm(lifeExp ~ gdpPercap + year + pop:country, data = gap)
+```
+
+Let's plot the residuals again:
+```{r}
+qqnorm(residuals(mod2))
+qqline(residuals(mod2), col = "red")
+```
+
+That's looking a lot better! If this was a real analysis, there are still additional steps we might want to take, but the point of this exercise is that everything we just did to validate our model was not suggested by Copilot when we asked it to identify the drivers of life expectancy. If we had just gone along with what Copilot gave us, we may not have discovered the problem with population size. We had to use our knowledge as data scientists to guide our analysis. Copilot is still helpful for creating code to run our models, generate plots, etc., but we need to be the ones in the drivers seat. You are the expert!
+
 💡 **Tip**: If you have been going through this workshop in our GitHub Codespace and you want to save the changes you made to this file, the easiest way is to just copy and paste the file into a local file on your computer. If you are comfortable with Git, you can also fork this repository and commit your changes to your fork (instructions here: https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle#saving-changes-in-a-codespace).
 
 ⚠️ **Final Warning**: Copilot is a wonderful tool for helping us code. It can often help us write better code and even catch common mistakes. However, it is not perfect and can provide incorrect or even harmful suggestions. It is important to always review the code that Copilot provides and make sure it is doing what you expect it to do. It is easy to slip into "Tab" completing everything and using big chunks of code written by Copilot. However, **not all incorrect code will result in a error or warning, the most common and insidious code problems are silent**, which is why it is essential to understand what your code is doing.
