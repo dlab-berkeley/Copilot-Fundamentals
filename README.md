@@ -41,16 +41,11 @@ Follow the instructions [here](copilot_and_vscode_setup.md) to subscribe to GitH
 
 ### During the workshop (or optionally before):
 
-1.  [Download R](https://www.r-project.org/): Follow the links according
-    to the operating system that you are running. Download the package,
-    and install R onto your compute. You should install the most recent
-    version (at least version 4.3).
-
-2.  [Download Visual Studio Code](https://code.visualstudio.com/): Follow
+1.  [Download Visual Studio Code](https://code.visualstudio.com/): Follow
     the links according to the operating system that you are running. Do this after you have
     already installed R.
    
-3. Download these workshop materials:
+2. Download these workshop materials:
     * Click the green "Code" button in the top right of the repository information.
     * Click "Download Zip".
     * Extract this file to a folder on your computer where you can easily access it (we recommend Desktop).
