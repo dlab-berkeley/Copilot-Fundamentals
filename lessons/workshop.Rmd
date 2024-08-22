@@ -272,7 +272,7 @@ What do you notice about this model? How is this code different than what you wo
 
 What next steps would you take to assess the validity of this model?
 
-You may notice that Copilot recommends including variables that you may not want to include or that are colinear (for example, country and continent). Let's simplify the model:
+You may notice that Copilot recommends including variables that you may not want to include or that are colinear. Let's simplify the model:
 
 ```{r}
 mod1 <- lm(lifeExp ~ gdpPercap + year + pop, data = gap)
