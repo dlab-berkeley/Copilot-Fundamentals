@@ -246,7 +246,7 @@ function(input1, input2)
 
 💡 **Tip**: You may have to use some comments (e.g., `# Return a vector of colors`) to give more context to Copilot for crafting your function.
 ```{r}
-
+# Add your function here
 ```
 
 🔔 **Question**: What did Copilot do correctly and/or incorrectly in generating your custom function?
