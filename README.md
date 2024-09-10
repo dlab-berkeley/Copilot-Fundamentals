@@ -1,6 +1,5 @@
 # D-Lab Copilot Assisted Coding Workshop
 
-[![Binder](https://mybinder.org/badge_logo.svg)](BINDER_LINK_HERE)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 This repository contains the materials for D-Lab Copilot Assisted Coding Workshop. 
