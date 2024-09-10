@@ -17,13 +17,13 @@ Throughout this workshop series, we will use the following icons:
 
 🔔 **Question**: A quick question to help you understand what's going on.
 
-🥊 **Challenge**: Interactive exercise. We'll go through these in the workshop!
+🥊 **Challenge**: Interactive exercise. We'll go through these in the workshop! Solutions to the challenges can be found in the solutions folder.
 
 ⚠️ **Warning**: Heads-up about tricky stuff or common mistakes.
 
 💡 **Tip**: How to do something a bit more efficiently or effectively.
 
-## 1. Getting ComforTable with Visual Studio Code
+## 1. Getting Comfortable with Visual Studio Code
 
 Visual Studio Code (VS Code) is a free code editor. When you start VS Code, you will be greeted by a Welcome screen that prompts you to start by opening a file or folder. Click `Open Folder` and open the GitHub-Copilot workshop folder that you downloaded from GitHub. 
 
@@ -70,7 +70,7 @@ We will also need the `httpgd` package to display plots interactively in VS Code
 💡 **Tip**: Unlike tidyverse or other packages you may actively use when coding, we do not need to load the `httpgd` package everytime (i.e., we don't need to run `library("httpgd")`). `httpgd` just provides the infrastructure for showing plots in VS Code.
 
 Once we have installed the `httpgd` package, you need to set `httpgd` as the default plot viewer. You can do this by: 
-1. Press `Ctrl + ,` or `Cmd + ,` to open the settings 
+1. Click the settings cog in the lower left hand corner or press `Ctrl + ,` or `Cmd + ,` to open the settings 
 2. Search for `r.plot.useHttpgd` in the search bar
 3. Click on the tick box to set it to true
 
@@ -141,7 +141,7 @@ ggplot(gap, aes(x = gdpPercap)) +
 
 Some things that you may have noticed are:
 
-1. It loads `ggplot2` because it knows we need it for plotting - however, this is unnecessary because we have loaded the `tidyverse` package which includes `ggplot2` &mdash; GitHub Copilot doesn't know that. 
+1. It loads `ggplot2` because it knows we need it for plotting - however, this is unnecessary because we have loaded the `tidyverse` package which includes `ggplot2`, but GitHub Copilot doesn't know that. 
 
 2. It may have set the binwidth for the histograms to 5 and 1000 - These are somewhat arbitrary values that Copilot chose and likely you as the user will want to change them. They are only somewhat arbitrary because they actually do make sense for the data; 5 and 1000 are pretty reasonable binwidths for life expectancy and GDP per capita, respectively.
 
@@ -330,11 +330,7 @@ qqnorm(residuals(mod2))
 qqline(residuals(mod2), col = "red")
 ```
 
-That's looking a lot better! If this was a real analysis, there are still additional steps we might want to take, but the point of this exercise is that everything we just did to validate our model was not suggested by Copilot when we asked it to identify the drivers of life expectancy. If we had just gone along with what Copilot gave us, we may not have discovered the problem with population size. We had to use our knowledge as data scientists to guide our analysis. Copilot is still helpful for creating code to run our models, generate plots, etc., but we need to be the ones in the drivers seat. You are the expert!
-
-💡 **Tip**: If you have been going through this workshop in our GitHub Codespace and you want to save the changes you made to this file, the easiest way is to just copy and paste the file into a local file on your computer. If you are comfortable with Git, you can also fork this repository and commit your changes to your fork (instructions here: https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle#saving-changes-in-a-codespace).
-
-⚠️ **Final Warning**: Copilot is a wonderful tool for helping us code. It can often help us write better code and even catch common mistakes. However, it is not perfect and can provide incorrect or even harmful suggestions. It is important to always review the code that Copilot provides and make sure it is doing what you expect it to do. It is easy to slip into "Tab" completing everything and using big chunks of code written by Copilot. However, **not all incorrect code will result in a error or warning, the most common and insidious code problems are silent**, which is why it is essential to understand what your code is doing.
+That's looking a lot better! If this was a real analysis, there are still additional steps we might want to take, but the point of this exercise is that everything we just did to validate our model was not suggested by Copilot when we asked it to identify the drivers of life expectancy. If we had just gone along with what Copilot gave us, we may not have discovered the problem with population size. **Not all incorrect code will result in a error or warning, the most common and insidious code problems are silent**, which is why it is essential to understand what your code is doing. We had to use our knowledge as data scientists to guide our analysis. Copilot is still helpful for creating code to run our models, generate plots, etc., but we need to be the ones in the drivers seat. You are the expert!
 
 ## Key Points
 
@@ -349,3 +345,5 @@ Summary of what was learned in today's workshop:
 -   Copilot can help you clean-up your code and change repetitive code into functions.
 
 -   Copilot is still learning and may not always provide the exact code you want. You may need to make changes to the code it provides. The more you use Copilot, the better it will get.
+
+💡 **Tip**: If you have been going through this workshop in our GitHub Codespace and you want to save the changes you made to this file, the easiest way is to just copy and paste the file into a local file on your computer. If you are comfortable with Git, you can also fork this repository and commit your changes to your fork (instructions here: https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle#saving-changes-in-a-codespace).
