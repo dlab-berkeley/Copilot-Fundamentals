@@ -230,6 +230,7 @@ We can take this clean-up a step further and ask it to make a function from our 
 # Paste the new function code here
 ```
 
+### 🥊 Challenge 7:
 We can also prompt Copilot to generate a function from scratch. You can do this by either using the chat, prompting with a comment (i.e., `# Create a function that...`), or just starting to write a function (i.e., `function_name <- function(...)`; in this case, Copilot will use the name of the function to guess at what you are trying to make). Try to create your own custom function below by using this last approach. For example, you could prompt Copilot to return the colors of the rainbow by writing `rainbow_colors <- function()`.
 
 As a reminder functions in R look like this:
@@ -254,7 +255,7 @@ function(input1, input2)
 
 A common pitfall when working with Copilot is using it to generate code without understanding what the code is doing. **Just because code runs without an error does not mean it is correct.** Remember, you are the pilot and Copilot is...the copilot; it is crucial to use your knowledge and expertise to guide your coding decisions.
 
-### 🥊 Challenge 7: 
+### 🥊 Challenge 8: 
 To demonstrate this pitfall, let's ask Copilot to do something very broad: figure out what drives life expectancy.
 
 ```{r}
