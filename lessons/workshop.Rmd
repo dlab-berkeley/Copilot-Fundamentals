@@ -17,13 +17,13 @@ Throughout this workshop series, we will use the following icons:
 
 🔔 **Question**: A quick question to help you understand what's going on.
 
-🥊 **Challenge**: Interactive exercise. We'll go through these in the workshop!
+🥊 **Challenge**: Interactive exercise. We'll go through these in the workshop! Solutions to the challenges can be found in the solutions folder.
 
 ⚠️ **Warning**: Heads-up about tricky stuff or common mistakes.
 
 💡 **Tip**: How to do something a bit more efficiently or effectively.
 
-## 1. Getting ComforTable with Visual Studio Code
+## 1. Getting Comfortable with Visual Studio Code
 
 Visual Studio Code (VS Code) is a free code editor. When you start VS Code, you will be greeted by a Welcome screen that prompts you to start by opening a file or folder. Click `Open Folder` and open the GitHub-Copilot workshop folder that you downloaded from GitHub. 
 
@@ -70,7 +70,7 @@ We will also need the `httpgd` package to display plots interactively in VS Code
 💡 **Tip**: Unlike tidyverse or other packages you may actively use when coding, we do not need to load the `httpgd` package everytime (i.e., we don't need to run `library("httpgd")`). `httpgd` just provides the infrastructure for showing plots in VS Code.
 
 Once we have installed the `httpgd` package, you need to set `httpgd` as the default plot viewer. You can do this by: 
-1. Press `Ctrl + ,` or `Cmd + ,` to open the settings 
+1. Click the settings cog in the lower left hand corner or press `Ctrl + ,` or `Cmd + ,` to open the settings 
 2. Search for `r.plot.useHttpgd` in the search bar
 3. Click on the tick box to set it to true
 
@@ -141,7 +141,7 @@ ggplot(gap, aes(x = gdpPercap)) +
 
 Some things that you may have noticed are:
 
-1. It loads `ggplot2` because it knows we need it for plotting - however, this is unnecessary because we have loaded the `tidyverse` package which includes `ggplot2` &mdash; GitHub Copilot doesn't know that. 
+1. It loads `ggplot2` because it knows we need it for plotting - however, this is unnecessary because we have loaded the `tidyverse` package which includes `ggplot2`, but GitHub Copilot doesn't know that. 
 
 2. It may have set the binwidth for the histograms to 5 and 1000 - These are somewhat arbitrary values that Copilot chose and likely you as the user will want to change them. They are only somewhat arbitrary because they actually do make sense for the data; 5 and 1000 are pretty reasonable binwidths for life expectancy and GDP per capita, respectively.
 
@@ -169,16 +169,10 @@ ggplot(gap, aes(x = gdpPercap)) +
 
 ⚠️ **Warning**: Sometimes you may notice that Copilot doesn't do everything you told it to. This is because Copilot is still learning and may not always understand what you are asking for. You can always ask it again or make the changes yourself. For example, when you asked to change the background, it may have changed the background of the plot, when what you really wanted to do is to change the background of the panel, or vise versa; in that case, you would have to update your request to specify that you want to change the panel background.
 
-### 🥊 Challenge 3: 
-You can also use in-line chat in a blank line to generate new code. Start in-line chat in the empty chunk below and ask Copilot to generate code to calculate the mean and variance of the "pop" column in the `gap` data grouped by the "country" column.
-```{r}
-# Start in-line chat here
-```
-
 ### In-line suggestions
 Another handy feature of Copilot is in-line suggestions as you type. These suggestions appear in a lighter gray text after your cursor and you can accept them by pressing `Tab`. These suggestions can be very helpful for completing code quickly. Suggestions are automatically triggered by the code your write, based on context from the code you have already written. You may notice as you use Copilot more often that the suggestions even learn your "style" of coding.
 
-### 🥊 Challenge 4: 
+### 🥊 Challenge 3: 
 Start typing `unique_countries <- gap %>%` and see what suggestions Copilot gives you. You may need to wait a second for the suggestion to appear or continue typing. Click `Tab` to accept the suggestion. This should complete the code to create a vector of unique countries in the `gap` data frame.
 ```{r}
 # Start typing here
@@ -186,7 +180,7 @@ Start typing `unique_countries <- gap %>%` and see what suggestions Copilot give
 
 ⚠️ **Warning**: Copilot sometimes provides suggestions that are not what you want. You can always ignore the suggestion and continue typing. Copilot can change over time and give different suggestions based on even minor differences in context clues. You can test this out by deleting the line of code you just wrote and typing it again to see if you get the same suggestion.
 
-### 🥊 Challenge 5:
+### 🥊 Challenge 4:
 You can also trigger suggestions by providing comments in your code. These commments allow you to give more detailed information and context for the in-line suggestions. Start typing `# Calculate average gdpPercap and lifeExp grouped by continent for the year 2007` and see what suggestions Copilot gives you. Click `Tab` to accept the suggestion.
 
 💡 **Tip**: You may have to start writing `gap %>%` to trigger the suggestions.
@@ -196,7 +190,7 @@ You can also trigger suggestions by providing comments in your code. These commm
 
 Now you have seen how we can use both the chat, in-line chat, and in-line suggestions to interact with Copilot. So far we have used some simple examples, but Copilot can also help with more complex code.
 
-### 🥊 Challenge 6: 
+### 🥊 Challenge 5: 
 Here, we have code below that is a bit untidy (missing indents, no comments, long single lines of code). Highlight the code below and in the chat (you can use the in-line or the regular chat) ask Copilot to reformat this code and add comments. 
 ```{r}
 gap_mean <- gap%>%filter(continent=="Asia")%>%group_by(year)%>%summarise(mean = mean(lifeExp))
@@ -230,32 +224,7 @@ We can take this clean-up a step further and ask it to make a function from our 
 # Paste the new function code here
 ```
 
-We can also prompt Copilot to generate a function from scratch. You can do this by either using the chat, prompting with a comment (i.e., `# Create a function that...`), or just starting to write a function (i.e., `function_name <- function(...)`; in this case, Copilot will use the name of the function to guess at what you are trying to make). Try to create your own custom function below by using this last approach. For example, you could prompt Copilot to return the colors of the rainbow by writing `rainbow_colors <- function()`.
-
-As a reminder functions in R look like this:
-```r
-function_name <- function(input1, input2, ...) {
-  # Code goes here
-  return(output)
-}
-
-# to use the function
-function(input1, input2)
-```
-
-💡 **Tip**: You may have to use some comments (e.g., `# Return a vector of colors`) to give more context to Copilot for crafting your function.
-```{r}
-
-```
-
-🔔 **Question**: What did Copilot do correctly and/or incorrectly in generating your custom function?
-
-⚠️ **Warning**: Sometimes Copilot will not generate suggestions and you will have to keep typing to trigger the suggestions. Also, if you are a speedy typer, Copilot may not have time to generate suggestions, so you may need to slow down a bit to give it time to catch up. The more you use Copilot, the better it will get at providing suggestions.
-
-A common pitfall when working with Copilot is using it to generate code without understanding what the code is doing. **Just because code runs without an error does not mean it is correct.** Remember, you are the pilot and Copilot is...the copilot; it is crucial to use your knowledge and expertise to guide your coding decisions.
-
-### 🥊 Challenge 7: 
-To demonstrate this pitfall, let's ask Copilot to do something very broad: figure out what drives life expectancy.
+A common pitfall when working with Copilot is using it to generate code without understanding what the code is doing. **Just because code runs without an error does not mean it is correct.** Remember, you are the pilot and Copilot is...the copilot; it is crucial to use your knowledge and expertise to guide your coding decisions. To demonstrate this pitfall, let's ask Copilot to do something very broad: figure out what drives life expectancy.
 
 ```{r}
 # Using the chat, ask Copilot to determine the driver of life expectancy in our data
@@ -268,22 +237,13 @@ mod <- lm(lifeExp ~ ., data = gap)
 summary(mod)
 ```
 
-What do you notice about this model? How is this code different than what you would have done? 
-
 What next steps would you take to assess the validity of this model?
-
-You may notice that Copilot recommends including variables that you may not want to include or that are colinear (for example, country and continent). Let's simplify the model:
-
-```{r}
-mod1 <- lm(lifeExp ~ gdpPercap + year + pop, data = gap)
-summary(mod1)
-```
 
 Next, let's check the residuals of the model to see if they are normally distributed:
 ```{r}
 # Q-Q plot for residuals
-qqnorm(residuals(mod1))
-qqline(residuals(mod1), col = "red")
+qqnorm(residuals(mod))
+qqline(residuals(mod), col = "red")
 ```
 
 The residuals do not appear to be normally distributed (i.e., the points deviate from the Q-Q line). Let's do some additional data visualization to figure out what is going on:
@@ -318,23 +278,7 @@ ggplot(gap, aes(x = pop, y = lifeExp, color = country)) +
   theme(legend.position = "none")
 ```
 
-It seems like we should fit an interaction term for country based on these plots. Let's fit a model with an interaction term for country and population size.
-
-```{r}
-mod2 <- lm(lifeExp ~ gdpPercap + year + pop:country, data = gap)
-```
-
-Let's plot the residuals again:
-```{r}
-qqnorm(residuals(mod2))
-qqline(residuals(mod2), col = "red")
-```
-
-That's looking a lot better! If this was a real analysis, there are still additional steps we might want to take, but the point of this exercise is that everything we just did to validate our model was not suggested by Copilot when we asked it to identify the drivers of life expectancy. If we had just gone along with what Copilot gave us, we may not have discovered the problem with population size. We had to use our knowledge as data scientists to guide our analysis. Copilot is still helpful for creating code to run our models, generate plots, etc., but we need to be the ones in the drivers seat. You are the expert!
-
-💡 **Tip**: If you have been going through this workshop in our GitHub Codespace and you want to save the changes you made to this file, the easiest way is to just copy and paste the file into a local file on your computer. If you are comfortable with Git, you can also fork this repository and commit your changes to your fork (instructions here: https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle#saving-changes-in-a-codespace).
-
-⚠️ **Final Warning**: Copilot is a wonderful tool for helping us code. It can often help us write better code and even catch common mistakes. However, it is not perfect and can provide incorrect or even harmful suggestions. It is important to always review the code that Copilot provides and make sure it is doing what you expect it to do. It is easy to slip into "Tab" completing everything and using big chunks of code written by Copilot. However, **not all incorrect code will result in a error or warning, the most common and insidious code problems are silent**, which is why it is essential to understand what your code is doing.
+We can see that the relationship varies by country and fitting one line to all of the countries is probably not a good idea. If this was a real analysis, there are  additional steps we would take to address this issue, but the point of this exercise is that everything we just did to validate our model was not suggested by Copilot when we asked it to identify the drivers of life expectancy. If we had just gone along with what Copilot gave us, we may not have discovered the problem with population size. **Not all incorrect code will result in a error or warning, the most common and insidious code problems are silent**, which is why it is essential to understand what your code is doing. We had to use our knowledge as data scientists to guide our analysis. Copilot is still helpful for creating code to run our models, generate plots, etc., but we need to be the ones in the drivers seat. You are the expert!
 
 ## Key Points
 
@@ -349,3 +293,5 @@ Summary of what was learned in today's workshop:
 -   Copilot can help you clean-up your code and change repetitive code into functions.
 
 -   Copilot is still learning and may not always provide the exact code you want. You may need to make changes to the code it provides. The more you use Copilot, the better it will get.
+
+💡 **Tip**: If you have been going through this workshop in our GitHub Codespace and you want to save the changes you made to this file, the easiest way is to just copy and paste the file into a local file on your computer. If you are comfortable with Git, you can also fork this repository and commit your changes to your fork (instructions here: https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle#saving-changes-in-a-codespace).

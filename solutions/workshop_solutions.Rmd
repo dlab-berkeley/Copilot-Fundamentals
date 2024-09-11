@@ -56,22 +56,12 @@ ggplot(gap, aes(x = gdpPercap)) +
         plot.title = element_text(hjust = 0.5))
 ```
 
-### 🥊 Challenge 3: 
-You can also use in-line chat in a blank line to generate new code. Start in-line chat in the empty chunk below and ask Copilot to generate code to calculate the mean and variance of the "pop" column in the `gap` data grouped by the "country" column.
-```{r}
-mean_var <- gap %>%
-  group_by(country) %>%
-  summarise(mean_pop = mean(pop), var_pop = var(pop))
-
-mean_var
-```
-
 ### In-line suggestions
 You may have noticed throughout this workshop that Copilot provides suggestions as you type in a lighter gray text. These suggestions can be helpful for completing code quickly. You can accept a suggestion by pressing `Tab`. 
 
 Suggestions are automatically triggered by the code your write, based on context from the code you have already written. 
 
-### 🥊 Challenge 4: 
+### 🥊 Challenge 3: 
 Start typing `unique_countries <- gap` and see what suggestions Copilot gives you. Accept the suggestion that completes the code to create a vector of unique countries in the `gap` data frame.
 ```{r}
 unique_countries <- 
@@ -80,7 +70,7 @@ unique_countries <-
   unique()
 ```
 
-### 🥊 Challenge 5:
+### 🥊 Challenge 4:
 You can also trigger suggestions by providing comments in your code. These commments allow you to give more detailed information and context for the in-line suggestions. Start typing `# Calculate average gdpPercap and lifeExp grouped by continent for the year 2007` and see what suggestions Copilot gives you. 
 
 💡 **Tip**: You may have to start writing `gap %>%` to trigger the suggestions.
@@ -92,7 +82,7 @@ gap_2007 <- gap %>%
   summarise(mean_gdpPercap = mean(gdpPercap), mean_lifeExp = mean(lifeExp))
 ```
 
-### 🥊 Challenge 6: 
+### 🥊 Challenge 5: 
 
 Copilot can be really useful for cleaning up your code. For example, we have code below that is a bit untidy (missing indents, no comments, long single lines of code). Highlight the code below and in the chat ask Copilot to format this code and add comments.
 ```{r}
@@ -183,38 +173,48 @@ plot_life_expectancy("Europe")
 plot_life_expectancy("Oceania")
 ```
 
-We can also prompt Copilot to generate a function from scratch. You can do this by either using the chat, prompting with a comment (i.e., `# Create a function that...`), or just starting to write a function (i.e., `function_name <- function(...)`; in this case, Copilot will use the name of the function to guess at what you are trying to make). Try to create your own custom function below by using this last approach. For example, you could prompt Copilot to return the colors of the rainbow by writing `rainbow_colors <- function()`.
+### 🥊 Challenge 6: 
 
-💡 **Tip**: You may have to use some comments (e.g., `# Return a vector of colors`) to give more context to Copilot for crafting your function.
+Example response from GitHub Copilot when prompted to "determine the drivers of life expectancy":
+
+"To determine the driver of life expectancy, you can perform a regression analysis using relevant predictors such as GDP, healthcare expenditure, education, etc. Here's a step-by-step plan and the corresponding R code to perform this analysis:
+
+Step-by-Step Plan:
+Load necessary libraries: Use tidyverse for data manipulation and broom for tidying model outputs.
+Load the dataset: Ensure the dataset contains life expectancy and potential predictors.
+Fit a linear regression model: Use lm() to fit the model with life expectancy as the dependent variable and potential predictors as independent variables.
+Summarize the model: Use summary() to get the model details.
+Interpret the results: Identify significant predictors based on p-values.
+
+R Code:
 ```{r}
-# Function returned by Copilot:
-rainbow_colors <- function() {
-  # Return a vector of colors
-  colors <- c("red", "orange", "yellow", "green", "blue", "indigo", "violet")
-  return(colors)
-}
+# Load necessary libraries
+library(tidyverse)
+library(broom)
 
-# Note that "indigo" is not a recognized color in R, but it is included here for the sake of the rainbow sequence. Below, we have removed indigo and plotted the colors.
+# Load the dataset (assuming the dataset is named 'gapminder_data')
+# gapminder_data <- read.csv("path_to_your_dataset.csv")
 
-rainbow_colors <- function() {
-  # Return a vector of colors
-  colors <- c("red", "orange", "yellow", "green", "blue", "violet")
-  return(colors)
-}
+# Fit a linear regression model
+model <- lm(life_expectancy ~ gdp + healthcare_expenditure + education, data = gapminder_data)
 
-# ggplot of the rainbow colors 
-ggplot(data.frame(x = 1:6, y = 1:6), aes(x = x, y = y, color = rainbow_colors())) +
-  geom_point(size = 5) +
-  scale_color_identity()
+# Summarize the model
+model_summary <- summary(model)
+
+# Print the model summary
+print(model_summary)
+
+# Tidy the model output for better readability
+tidy_model <- tidy(model)
+
+# Print the tidy model output
+print(tidy_model)
 ```
 
-### 🥊 Challenge 7: 
-To demonstrate this pitfall, let's ask Copilot to do something very broad: figure out what drives life expectancy.
-
-```{r}
-# Fit a linear model predicting life expectancy
-model <- lm(lifeExp ~ ., data = data)
-
-# Display the summary of the linear model to see the significant predictors
-summary(model)
-```
+Explanation:
+Libraries: tidyverse for data manipulation and broom for tidying model outputs.
+Dataset: Replace "path_to_your_dataset.csv" with the actual path to your dataset.
+Model: lm() function fits a linear regression model with life expectancy as the dependent variable and GDP, healthcare expenditure, and education as predictors.
+Summary: summary(model) provides detailed statistics of the model.
+Tidy Output: tidy(model) provides a cleaner output of the model coefficients and statistics.
+This analysis will help you identify which predictors significantly influence life expectancy."
