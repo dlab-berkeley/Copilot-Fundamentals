@@ -121,7 +121,7 @@ head(gap)
 # Add new code here 
 ```
 
-From Challenge 4 you should have gotten code that looks something like this:
+From Challenge 1 you should have gotten code that looks something like this:
 ```{r}
 # Assuming 'gap' is your data frame
 library(ggplot2)
