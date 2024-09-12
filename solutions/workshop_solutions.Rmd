@@ -29,20 +29,25 @@ head(gap)
 
 # Load the necessary library
 library(ggplot2)
-
-# Plot histogram for lifeExp
-ggplot(gap, aes(x=lifeExp)) +
-  geom_histogram(binwidth=5, fill="#69b3a2", color="#e9ecef", alpha=0.9) +
-  theme_minimal() +
-  labs(title="Histogram of Life Expectancy", x="Life Expectancy", y="Count")
-
-# Plot histogram for gdpPercap
-ggplot(gap, aes(x=gdpPercap)) +
-  geom_histogram(binwidth=1000, fill="#69b3a2", color="#e9ecef", alpha=0.9) +
-  theme_minimal() +
-  labs(title="Histogram of GDP per Capita", x="GDP per Capita", y="Count")
 ```
 
+Copilot can also help us debug errors in our code. Below I have written some code to create histograms of the "lifeExp" and "gdpPercap" columns in the `gap` data frame. However, I have made three mistakes in the code. Can you find them? Highlight the code below and ask Copilot to help you debug it.
+```{r}
+ggplot(gap, aes(x = gdpPercap, y = lifeExp)) +
+  geom_histogram(aes(fill = continet)) + 
+  vline(xintercept = mean(gap$gdpPercap), color = "red") +
+  labs(x = "GDP per Capita",  title = "Histogram of GDP per Capita")) +
+  theme_minimal()
+```
+
+Copilot corrected code:
+```{r}
+ggplot(gap, aes(x = gdpPercap)) +
+  geom_histogram(aes(fill = continent), binwidth = 1000) +  # Corrected typo and added binwidth
+  geom_vline(xintercept = mean(gap$gdpPercap), color = "red") +  # Corrected function name
+  labs(x = "GDP per Capita", title = "Histogram of GDP per Capita") +  # Removed extra parenthesis
+  theme_minimal() 
+```
 
 ### 🥊 Challenge 2: 
 Highlight this ggplot code, press `Ctrl + I`, and ask Copilot to change the background of the plot to your favorite color (e.g. "purple"), increase the text size of the x and y-axis titles to size 20, and make the title center aligned. This is super helpful for when you can't remember what the exact syntax is for a specific ggplot2 element.
