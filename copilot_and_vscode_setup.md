@@ -54,6 +54,10 @@ If you are a UC Berkeley student, the most straightforward way to get proof is t
 
 If you have a problem submitting your application please submit a D-Lab consulting request here with the subject line “GitHub Co-pilot workshop: applying for student developer pack”: <https://dlab.berkeley.edu/consulting/submit-consulting-request>
 
+Note: when you are creating a GitHub Co-pilot account you will be prompted to select whether GitHub can allow suggestions matching public code. You may want to select `Blocked` if you are worried about licensing and intellectual property, but for most of us it is better to select `Allowed` so we get access to more sources for our code.
+![Option to allow suggestions matching public code in GitHub Co-pilot](images/copilot_signup.png)
+
+
 # 2\. Setting up Visual Studio Code
 
 We will be using GitHub Copilot in Visual Studio Code (VS Code), a free code editor that allows you to work with a wide variety of languages including R, Python, and many others. If you have worked with RStudio before, you will find many parts of VS Code familiar.
