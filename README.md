@@ -65,7 +65,7 @@ You can create a codespace for this repository:
 
 The codespace uploads this repository, along with any necessary packages, and
 allows you to run the materials in the cloud in a virtual Visual Studio Code that will look basically like what is on your computer.
-No installation is necessary from your end, you only need an internet browser. To download your work from the codespace, right-click on the file you want to download in the `Explorer` panel on the left-hand side and click `Download...`. If you are comfortable with Git, you can also fork this repository and commit your changes to your fork (instructions [here](https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle#saving-changes-in-a-codespace)). 
+No installation is necessary from your end, you only need an internet browser. To download your work from the codespace, right-click on the file you want to download in the `Explorer` panel on the left-hand side and click `Download...` (Note: you may have to click `Allow` on a security pop-up). If you are comfortable with Git, you can also fork this repository and commit your changes to your fork (instructions [here](https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle#saving-changes-in-a-codespace)). 
 
 **Even if you are using our codespace you must have your own GitHub Copilot subscription; the codespace is linked to your GitHub account.** If you are using a free GitHub account, you automatically get [120 free codespace core-hours per month](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces). This 2 hour workshop should only use 4 core-hours.
 
