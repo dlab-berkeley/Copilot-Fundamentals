@@ -25,7 +25,9 @@ Throughout this workshop series, we will use the following icons:
 
 ## 1. Getting Comfortable with Visual Studio Code
 
-Visual Studio Code (VS Code) is a free code editor. When you start VS Code, you will be greeted by a Welcome screen that prompts you to start by opening a file or folder. Click `Open Folder` and open the GitHub-Copilot workshop folder that you downloaded from GitHub. 
+In our workshop, we will be using GitHub codespaces to run Visual Studio Code in the cloud. This means that you do not need to install anything on your computer to participate in the workshop. However, since you will likely want to use Visual Studio Code on your own computer in the future, we will walk you through how to set up Visual Studio Code.
+
+When you start VS Code on your own computer, you will be greeted by a Welcome screen that prompts you to start by opening a file or folder. Click `Open Folder` and open the GitHub-Copilot workshop folder that you downloaded from GitHub. 
 
 Now that you have opened a folder, you will see an `Explorer` panel appear with all of the files within the folder you just opened. Click on the `workshop.Rmd` file to open it. You can open and close the `Explorer` panel by clicking on the icon that looks like two pieces of paper in the left-hand sidebar.
 
@@ -43,6 +45,7 @@ For more tips and tricks like this, check out the extensive and user-friendly Vi
 In the search bar, type R. Click on the R extension and then click the green `Install` button. Repeat for the GitHub Copilot extension. When you install the GitHub Copilot extension you will be prompted to login to your GitHub account. This is necessary to use Copilot.
 
 ### Running code in Visual Studio Code
+
 Now that we have all the extensions we need, we can start running R code! To run a line of code, click on the line you want to run and press `Ctrl + Enter` or `Cmd + Enter`. To run multiple lines of code, highlight the lines you want to run and press `Ctrl + Enter`  or `Cmd + Enter`. If you are working in an R Markdown file, you can run a code chunk by clicking on the `Run Chunk` button that appears at the top of the chunk.
 
 Run the R code below and see what happens.
@@ -52,22 +55,25 @@ print("Yippee!")
 
 When you run this code you will notice that a new window appears below: the `Terminal`. This is where the output of your code will appear. You can also run code in the terminal by typing directly into it and pressing `Enter`. If you have used RStudio before, the terminal is similar to the console in RStudio.
 
-Now that we know how to run R, let's install and load the necessary packages for this workshop. First, let's install the `tidyverse` package. You can install it by running the code below. We will use this today for manipulating our data and for making plots.
+### Installing and loading packages on your computer
+
+The next steps are not necessary for this workshop, because we are using the GitHub codespace where everything is set-up for you. However, if you are working on your own computer, you will need to install and load some packages in R.
+
+First, install the `tidyverse` package. You can install it by running the code below. We will use this today for manipulating our data and for making plots.
 
 ```{r}
 # If you haven't installed tidyverse before, uncomment this line 
 # You may be prompted to pick a CRAN mirror: just choose the first one (0-Cloud [https])
 #install.packages("tidyverse")
-
-# If you have previously installed tidyverse, load it into the current R session
-library(tidyverse)
 ```
 
-We will also need the `httpgd` package to display plots interactively in VS Code. You can install it by running the code below.
+You will also need the `httpgd` package to display plots interactively in VS Code. You can install it by running the code below.
+
 ```{r}
 # if you haven't installed httpgd before, uncomment this line
 #install.packages("httpgd")
 ```
+
 💡 **Tip**: Unlike tidyverse or other packages you may actively use when coding, we do not need to load the `httpgd` package everytime (i.e., we don't need to run `library("httpgd")`). `httpgd` just provides the infrastructure for showing plots in VS Code.
 
 Once we have installed the `httpgd` package, you need to set `httpgd` as the default plot viewer. You can do this by: 
@@ -77,6 +83,8 @@ Once we have installed the `httpgd` package, you need to set `httpgd` as the def
 
 Check that both tidyverse and httpgd are installed and working by running the code below:
 ```{r}
+library(tidyverse)
+
 # Create a tiny data.frame
 tiny_df <- data.frame(x = c(1, 2, 3), y = c(4, 5, 6))
 
@@ -92,6 +100,9 @@ Now that we have set up Visual Studio Code, we can start using GitHub Copilot!
 For our examples, we will be using data from [Gapminder](https://www.gapminder.org/), an educational non-proﬁt. It includes data for 142 countries, with values for life expectancy, GDP per capita, and population, every five years, from 1952 to 2007.
 
 ```{r}
+# Load the tidyverse
+library(tidyverse)
+
 # Read in data
 gap <- read.csv(file = "data/gapminder.csv")
 head(gap)
@@ -214,6 +225,9 @@ We can take this clean-up a step further and ask it to make a function from our 
 # Paste the new function code here
 ```
 
+
+### Avoiding common pitfalls
+
 A common pitfall when working with Copilot is using it to generate code without understanding what the code is doing. **Just because code runs without an error does not mean it is correct.** Remember, you are the pilot and Copilot is...the copilot; it is crucial to use your knowledge and expertise to guide your coding decisions. To demonstrate this pitfall, let's ask Copilot to do something very broad: figure out what drives life expectancy.
 
 ```{r}
@@ -254,7 +268,7 @@ ggplot(gap, aes(x = gdpPercap, y = lifeExp)) +
   theme(legend.position = "none")
 ```
 
-We notice that the relationship between some of the variables and life expectancy are non-linear. We are going to focus on population size, because there is a particularly strong non-linear pattern in the data and it appears as if we may need an interaction term. Let's plot the points colored by continent and country to see if there is a pattern:
+We notice that the relationship between some of the variables and life expectancy are non-linear. We are going to focus on population size, because there is a particularly strong non-linear pattern in the data. There appear to be some groups in the data; let's plot the points colored by continent and country to see if there is a pattern:
 
 ```{r}
 ggplot(gap, aes(x = pop, y = lifeExp, color = continent)) +
@@ -268,7 +282,7 @@ ggplot(gap, aes(x = pop, y = lifeExp, color = country)) +
   theme(legend.position = "none")
 ```
 
-We can see that the relationship varies by country and fitting one line to all of the countries is probably not a good idea. If this was a real analysis, there are  additional steps we would take to address this issue, but the point of this exercise is that everything we just did to validate our model was not suggested by Copilot when we asked it to identify the drivers of life expectancy. If we had just gone along with what Copilot gave us, we may not have discovered the problem with population size. **Not all incorrect code will result in a error or warning, the most common and insidious code problems are silent**, which is why it is essential to understand what your code is doing. We had to use our knowledge as data scientists to guide our analysis. Copilot is still helpful for creating code to run our models, generate plots, etc., but we need to be the ones in the drivers seat. You are the expert!
+We can see that the relationship varies by country and fitting one line to all of the countries is probably not a good idea. If this was a real analysis, there are additional steps we would take to address this issue, but the point of this exercise is that everything we just did to validate our model was not suggested by Copilot when we asked it to identify the drivers of life expectancy. If we had just gone along with what Copilot gave us, we may not have discovered the problem with population size. **Not all incorrect code will result in a error or warning, the most common and insidious code problems are silent**, which is why it is essential to understand what your code is doing. We had to use our knowledge as data scientists to guide our analysis. Copilot is still helpful for creating code to run our models, generate plots, etc., but we need to be the ones in the drivers seat. You are the expert!
 
 ## Key Points
 
