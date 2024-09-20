@@ -29,10 +29,11 @@ Visual Studio Code (VS Code) is a free code editor. When you start VS Code, you 
 
 Now that you have opened a folder, you will see an `Explorer` panel appear with all of the files within the folder you just opened. Click on the `workshop.Rmd` file to open it. You can open and close the `Explorer` panel by clicking on the icon that looks like two pieces of paper in the left-hand sidebar.
 
-💡 **Tip**: When we are working in a markdown file like this one, you may notice the text sometimes goes off the screen if the line is very long. We can change our VS Code settings to make it so that the text in our markdowns is automatically wrapped. To do this: 
+💡 **Tip**: When you are on your own computer in Visual Studio Code, you may notice the text sometimes goes off the screen if the line is very long. You can change your VS Code settings to make it so that the text in your markdown is automatically wrapped. To do this: 
 1. Press `Ctrl + ,` or `Cmd + ,` to open the settings (You can also click on the cog icon in the bottom left corner of the window and then click `Settings`).
 2. Search for word "wrap" in the search bar.
 3. In the dropdown menu for `Editor: Word Wrap`, select on.
+For more tips and tricks like this, check out the extensive and user-friendly Visual Studio Code documentation (https://code.visualstudio.com/docs) or ask you can even ask GitHub Copilot!
 
 ### Visual Studio Code Extensions
 **Extensions** are add-ons that you can install to add additional features and tools to Visual Studio Code. You can find extensions by clicking on the square icon with four squares in the left-hand sidebar to open the `Extensions` panel. We will be using the following extensions in this workshop:
