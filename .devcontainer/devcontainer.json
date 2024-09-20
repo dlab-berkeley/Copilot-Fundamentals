@@ -13,7 +13,8 @@
         "r.plot.useHttpgd": true,
         "[r]": {
           "editor.wordSeparators": "`~!@#%$^&*()-=+[{]}\\|;:'\",<>/?"
-        }
+        },
+        "editor.wordWrap": "on"
       },
       "extensions": [
         "github.copilot",
